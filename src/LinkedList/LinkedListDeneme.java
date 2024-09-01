@@ -14,7 +14,7 @@ public class LinkedListDeneme {
 
   public void insert(int data) {
     Node node1 = new Node(data);
-    if(this.head == null) {
+    if(this.head != null) {
         this.head = node1;
     }else {
         Node tmp = this.head;
