@@ -2,6 +2,7 @@ package LinkedList;
 
 public class LinkedList2 {
     Node head;
+    Node next;
     static class Node {
         int value;
         Node next;
@@ -120,5 +121,22 @@ public class LinkedList2 {
 
     public boolean isPalindrome() {
      return true;
+    }
+
+
+
+    public void reverseStop(Node head, int stop) {
+        Node next;
+        Node prev = null;
+        Node curr = this.head;
+        while(stop >= 0) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+            stop--;
+        }
+        this.head = prev;
+
     }
 }
